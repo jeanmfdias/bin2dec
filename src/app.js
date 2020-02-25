@@ -2,7 +2,8 @@ const $ = document.querySelector.bind(document);
 
 let binaryField = $('#binaryField');
 let errorsLabel = $('#errorsLabel');
-let decimalCovertedLabel = $('#decimalCovertedLabel');
+let decimalField = $('#decimalField');
+let btnCalculate = $('#btnCalculate');
 
 binaryField.addEventListener('keyup', (event) => {
     let errors = '';
@@ -17,6 +18,21 @@ binaryField.addEventListener('keyup', (event) => {
         })
         .join("");
     
-    errorsLabel.textContent = errors;
     binaryField.value = value;
+    errorsLabel.textContent = errors;
+    decimalField.value = '';
+});
+
+btnCalculate.addEventListener('click', (event) => {
+    let value = binaryField.value.split("");
+    let total = value.length;
+    let decimal = 0;
+    let j = 0;
+    for (let i = 1; i <= value.length; i++) {
+        decimal += parseInt(value[total - i]) * (2 ** j);
+        j++;
+    }
+
+    decimalField.value = decimal;
+    errorsLabel.textContent = '';
 });
