@@ -26,3 +26,7 @@ button:hover {
     background: #cccccc;
     box-shadow: 1px 1px 1px #aaaaaa;
 }
+
+#errorsLabel {
+    color: #ff0000;
+}
