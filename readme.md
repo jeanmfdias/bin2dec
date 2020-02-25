@@ -1,5 +1,7 @@
 # Bin2Dec
 
+Idea from [App-Ideas](https://github.com/florinpop17/app-ideas)
+
 **Tier:** 1-Beginner
 
 Binary is the number system all digital computers are based on.
@@ -27,7 +29,7 @@ constraints:
 
 ## Bonus features
 
--   [ ] User can enter a variable number of binary digits
+-   [x] User can enter a variable number of binary digits
 
 ## Useful links and resources
 
